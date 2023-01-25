@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS meds_db;
+
+CREATE DATABASE meds_db;
