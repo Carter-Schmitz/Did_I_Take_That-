@@ -3,19 +3,23 @@ const sequilize = require("../config/connection");
 
 class Medication extends Model {}
 
-Medication.init({
-  id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    primaryKey: true,
-    autoIncrement: true,
+Medication.init(
+  {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    content: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  content: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-});
+  {
+    sequilize,
+    freezeTableName: true,
+    underscored: true,
+    modelname: "medication",
+  }
+);
+
+module.exports = Medication;
