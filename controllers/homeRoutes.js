@@ -6,7 +6,8 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id, {
-        include: {model: Medication}
+        include: {model: Medication,
+        attributes: ['name', 'dosage', 'taken', 'quantity']}
     });
 
     const user = userData.map((medication) => medication.get({ plain: true }));
