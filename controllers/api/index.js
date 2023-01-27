@@ -3,6 +3,6 @@ const userRoutes = require('./userRoutes');
 const medRoutes = require('./medRoutes');
 
 router.use('/users', userRoutes);
-router.use('/meds', medRoutes);
+router.use('/medication', medRoutes);
 
 module.exports = router;
