@@ -6,4 +6,9 @@ Medication.belongsTo(User, {
   onDelete: "CASCADE",
 });
 
+User.hasMany(Medication, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
 module.exports = { User, Medication };
