@@ -15,8 +15,20 @@ Medication.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    content: {
+    dosage: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    frequency: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    taken: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    quantity: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },
