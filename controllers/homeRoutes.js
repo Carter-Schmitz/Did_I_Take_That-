@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { User, Meds } = require('../models');
+const { User, Medication } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Prevent non logged in users from viewing the homepage
 router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.params.id, {
-        include: {model: Meds}
+        include: {model: Medication}
     });
 
     const user = userData.map((medication) => medication.get({ plain: true }));
