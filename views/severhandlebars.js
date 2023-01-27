@@ -10,9 +10,9 @@ app.engine('handlebars', handlebars.engine({
 layoutsDir: __dirname + '/views/layouts',
 }));
 app.use(express.static('public'))
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
 //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
-res.render('homepage', {layout : 'index'});
+res.render('login',{layout:'index'});
 });
 
 app.listen(port, () => console.log(`App listening to port ${port}`));
