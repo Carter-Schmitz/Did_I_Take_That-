@@ -40,3 +40,13 @@ body {
   width: 150px;
   border: 2px solid black;
 }
+
+.signupbtn {
+  padding : 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: orange;
+  text-decoration: none;
+  -webkit-text-stroke:1px black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

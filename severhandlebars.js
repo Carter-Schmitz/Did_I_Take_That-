@@ -19,5 +19,10 @@ app.get("/login", (req, res) => {
   //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
   res.render("login", { layout: "index" });
 });
+app.use(express.static("public"));
+app.get("/signup", (req, res) => {
+  //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
+  res.render("signup", { layout: "index" });
+});
 
 app.listen(port, () => console.log(`App listening to port ${port}`));
