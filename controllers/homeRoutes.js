@@ -12,10 +12,11 @@ router.get('/', withAuth, async (req, res) => {
 
     const user = userData.map((medication) => medication.get({ plain: true }));
 
-    res.render('homepage', {
+    res.render('homepage',  {
       user,
       // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
+      layout: "index",
     });
   } catch (err) {
     res.status(500).json(err);
@@ -29,7 +30,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', { layout: "index" });
 });
 
 module.exports = router;
