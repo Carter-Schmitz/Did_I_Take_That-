@@ -6,12 +6,23 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
+  <div class="home-container">
    
-      <main class="container container-fluid mt-5">
-        <h1>homepage</h1>
-      </main>
+     
+        <h1>Medication tracker</h1>
+        <form class="new-med-form">
+          
+        <input id="name-box" name="med-name" type="text" placeholder="name" />
+         <input id="dosage-box" name="med-dosage" type="text" placeholder="dosage" />
+          <input id="frequency-box" name="med-frequency" type="text" placeholder="frequency" />
+           <input id="taken-box" name="med-taken" type="text" placeholder="taken" />
+           <input id="quantity-box" name="med-quantity" type="text" placeholder="quantity" />
+           <button type="submit">Add Medication</button>
+        </form>
+    
   </div>
   </body>
 
 </html>
+
+<script src="/js/add-med.js"></script>
