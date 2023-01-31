@@ -3,4 +3,12 @@ const logout = async () => {
     method: "POST",
     headers: { "Content-Type": "aplication/json" },
   });
+
+  if (response.ok) {
+    document.location.replace("/");
+  } else {
+    alert("Failed to log out!");
+  }
 };
+
+document.querySelector("#logout").addEventListener("click", logout);
