@@ -33,7 +33,7 @@ router.get("/:name", withAuth, async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const medicationData = await Medication.create({
-      medication_name: req.body.medication_name,
+      name: req.body.name,
       dosage: req.body.dosage,
       frequency: req.body.frequency,
       taken: req.body.taken,
