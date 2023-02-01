@@ -38,6 +38,7 @@ router.post("/", async (req, res) => {
       frequency: req.body.frequency,
       taken: req.body.taken,
       quantity: req.body.quantity,
+      user_id: req.session.user_id
     });
     res.status(200).json(medicationData);
   } catch (err) {
