@@ -19,7 +19,9 @@
            <input id="quantity-box" name="med-quantity" type="text" placeholder="quantity" />
            <button type="submit">Add Medication</button>
         </form>
-    
+    {{#each medications as |medication|}}
+{{> meds}}
+{{/each}}
   </div>
   </body>
 
