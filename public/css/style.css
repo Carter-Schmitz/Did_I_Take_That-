@@ -56,3 +56,31 @@ body {
   -webkit-text-stroke:1px black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.form-group .form-control {
+  padding: 10px;
+  margin: 5px;
+  width: 300px;
+  border-radius: 12px;
+  border: 2px solid black;
+}
+
+.has-success .form-control {
+  border-bottom: 2px solid #168b3f;
+}
+
+.has-danger .form-control {
+  border-bottom: 2px solid #dc1d34;
+}
+
+.form-group .text-help {
+  color: #dc1d34;
+}
+
+.inline-label label{
+  display: inline;
+}
+
+.pristine-error {
+  display: table;
+}

@@ -1,28 +1,37 @@
 <div class="login-container">
-    <h1 class="login-heading"> Medication Tracker</h1>
-  <form id="signup-form" class="signup-form">
+  <h1 class="login-heading"> Medication Tracker</h1>
+  <form id="form1" class="signup-form">
+    <div class="form-group">
     <input
       id="username-signup"
-      class="username-box box"
+      class="form-control"
       type="text"
       placeholder="username"
+      required data-pristine-required-message="Please choose a username"
     />
-
+    </div>
+  <div class="form-group">
     <input
       id="email-signup"
-      class="email-box box"
-      type="text"
+      class="form-control"
+      data-pristine-type="email"
       placeholder="email"
     />
-    <input
+    </div>
+    <div class="form-group">
+       <input
       id="password-signup"
-      class="password box"
-      type="text"
-      placeholder="password"
+      type="password"
+      data-pristine-pattern= "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/"
+      class="form-control"
+      data-pristine-pattern-message="Minimum 8 characters, at least one uppercase letter, one lowercase letter and one number"
     />
+    </div>
     <button class="loginbtn" type="submit">signup</button>
   </form>
-    <a class="signupbtn" href="/login">Already Have an Account? Login </a>
+  <a class="signupbtn" href="/login">Already Have an Account? Login </a>
 </div>
 
+<script src="/js/pristine.min.js"  type="text/javascript"></script>
+<script src="/js/pristine.js"  type="text/javascript"></script>
 <script src="/js/signup.js"></script>

@@ -22,9 +22,9 @@ async function signupFormHandler(event) {
       console.log('success');
       document.location.replace('/');
     } else {
-      alert("Failed to signup");
+      // alert("Failed to signup");
     }
   }
 }
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);
