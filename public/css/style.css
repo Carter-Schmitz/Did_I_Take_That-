@@ -57,6 +57,7 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 .form-group .form-control {
   padding: 10px;
   margin: 5px;
@@ -83,4 +84,64 @@ body {
 
 .pristine-error {
   display: table;
+
+.new-med-form{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+
+.new-med-form input{
+  padding:10px;
+  border-radius: 5px;
+  width: 250px;
+  margin: 5px;
+  border: 1px solid black;
+  
+}
+.new-med-form button{
+  padding:5px;
+  border-radius: 5px;
+  width: 180px;
+  margin: 5px;
+
+}
+
+.med-container ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0;
+}
+.med-container{
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  margin-bottom:50px;
+
+}
+.meds-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.delete-med-btn{
+  padding:5px;
+  border-radius: 5px;
+  width: 180px;
+  margin: 5px;
+margin-left: 60px;
+margin: top 20px;
+
 }
