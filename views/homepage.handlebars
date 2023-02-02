@@ -11,15 +11,17 @@
    
      
         <h1>Medication tracker</h1>
+        <div class="form-group">
         <form class="new-med-form">
           
-        <input id="name-box" name="med-name" type="text" placeholder="name" />
-         <input id="dosage-box" name="med-dosage" type="text" placeholder="dosage" />
-          <input id="frequency-box" name="med-frequency" type="text" placeholder="frequency" />
-           <input id="taken-box" name="med-taken" type="text" placeholder="taken" />
-           <input id="quantity-box" name="med-quantity" type="text" placeholder="quantity" />
+        <input id="name-box" class="form-control" name="med-name" type="text" placeholder="name" required data-pristine-required-message="Please enter a medication name." />
+         <input id="dosage-box" class="form-control" name="med-dosage" type="text" placeholder="dosage" required data-pristine-required-message="Please enter a medication dosage." />
+          <input id="frequency-box" class="form-control" name="med-frequency" type="number" placeholder="frequency (hours between doses)" required data-pristine-required-message="Please enter the number of hours between doses." />
+           <input id="taken-box" class="form-control" name="med-taken" type="text" placeholder="taken" />
+           <input id="quantity-box" class="form-control" name="med-quantity" data-pristine-type="number" placeholder="quantity" required data-pristine-required-message="Please enter the current quantity of this medication."/>
            <button type="submit">Add Medication</button>
         </form>
+        </div>
     {{#each medications as |medication|}}
 {{> meds}}
 {{/each}}
@@ -38,3 +40,5 @@
 </html>
 
 <script src="/js/add-med.js"></script>
+<script src="/js/pristine.min.js"  type="text/javascript"></script>
+<script src="/js/pristine.js"  type="text/javascript"></script>
