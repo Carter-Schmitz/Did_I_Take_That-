@@ -1,14 +1,21 @@
-async function deleteFormHandler(event) {
-    event.preventDefault();
-    
-    const name = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-      ];
+const deletemedbtn = document.querySelectorAll(".delete-med-btn")
 
-    const response = await fetch(`/api/medication/${name}`, {
+deletemedbtn.forEach((btn,index)=>{ 
+  btn.addEventListener('click', ()=> {
+    
+    deleteFormHandler(index)  
+  })
+})
+  
+async function deleteFormHandler(index) {
+    const name = document.querySelectorAll(".med-name")
+    const namebtn = name[index].innerHTML
+    console.log(namebtn)
+    
+    const response = await fetch(`/api/medication/${namebtn}`, {
         method: 'DELETE',
         body: JSON.stringify({
-          medication_name: name
+          medication_name: namebtn
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -23,4 +30,3 @@ async function deleteFormHandler(event) {
     
   }
   
-  document.querySelector('.delete-med-btn').addEventListener('click', deleteFormHandler);
