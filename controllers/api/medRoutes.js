@@ -68,11 +68,11 @@ router.put("/", async (req, res) => {
   }
 });
 
-router.delete("/:name", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const medicationData = await Medication.destroy({
       where: {
-        name: req.params.name,
+        id: req.params.id,
       },
     });
 
