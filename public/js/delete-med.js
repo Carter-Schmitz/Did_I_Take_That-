@@ -1,13 +1,13 @@
 const deletemedbtn = document.querySelectorAll(".delete-med-btn")
-document.querySelector(".delete-med-btn").
-async function deleteFormHandler(index) {
-  deletemedbtn.forEach((btn,index)=>{ 
-    btn.addEventListener('click', ()=> {
-      console.log(index)
-      deleteFormHandler(index)  
-    })
-  })
+
+deletemedbtn.forEach((btn,index)=>{ 
+  btn.addEventListener('click', ()=> {
     
+    deleteFormHandler(index)  
+  })
+})
+  
+async function deleteFormHandler(index) {
     const name = document.querySelectorAll(".med-name")
     const namebtn = name[index].innerHTML
     console.log(namebtn)
@@ -15,7 +15,7 @@ async function deleteFormHandler(index) {
     const response = await fetch(`/api/medication/${namebtn}`, {
         method: 'DELETE',
         body: JSON.stringify({
-          medication_name: name
+          medication_name: namebtn
         }),
         headers: {
           'Content-Type': 'application/json'
