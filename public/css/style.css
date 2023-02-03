@@ -83,8 +83,7 @@ body {
 
 .pristine-error {
   display: table;
-}
- 
+
 .new-med-form{
   display: flex;
   flex-direction: column;
@@ -231,4 +230,5 @@ margin: top 20px;
   margin: 5px;
 margin-left: 60px;
 margin: top 20px;
+
 }
