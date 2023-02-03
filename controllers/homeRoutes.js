@@ -7,7 +7,7 @@ router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
         include: {model: Medication,
-        attributes: ['name', 'dosage', 'taken', 'quantity']}
+        attributes: ["id",'name', 'dosage', 'taken', 'quantity']}
     });
     console.log("user information")
     console.log(userData);
