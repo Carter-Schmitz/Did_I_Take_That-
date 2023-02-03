@@ -24,6 +24,8 @@
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
     "mysql2": "^3.0.1",
+    "pristine": "^0.0.1",
+    "pristinejs": "^0.1.9",
     "sequelize": "^6.28.0"
   }
 }

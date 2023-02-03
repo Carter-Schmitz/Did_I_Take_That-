@@ -5,7 +5,7 @@ const router = require('express').Router();
 
 
 router.get('/', (req, res) => {
-    res.render('signup', { layout: "index" });
+    res.render('signup');
   });
 
 router.post('/', async (req, res) => {
