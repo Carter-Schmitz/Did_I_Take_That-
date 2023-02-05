@@ -9,7 +9,7 @@
   <div class="home-container">
    
      
-        <h1>Medication tracker</h1>
+        <h1 class="login-heading">Medication Tracker</h1>
         <div class="form-group">
         <form class="new-med-form">
           
@@ -21,15 +21,32 @@
            <button type="submit">Add Medication</button>
         </form>
         </div>
+        <div class="meds-container">
+
     {{#each medications as |medication|}}
 {{> meds}}
 {{/each}}
-  </div>
+        </div>
+
+
+        <h1 class="login-heading">Coming Soon</h1>
+        <div class="coming-soon-container">
+
+        <div class="reminder soon-box">
+         <i class="fa-sharp fa-solid fa-bell"></i>
+          <h2>Set A  Reminder</h2>
+        </div>
+        <div class="delivery soon-box">
+         <i class="fa-solid fa-truck"></i>
+          <h2>Prescription Delivery</h2>
+        </div>
+        </div>
   {{#if logged_in}}
     <nav>
       <button class="btn" id="logout">logout</button>
     </nav>
     {{/if}}
+  </div>
 
     {{#if logged_in}}
   <script src="/js/logout.js"></script>
