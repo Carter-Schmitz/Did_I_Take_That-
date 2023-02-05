@@ -10,9 +10,10 @@
   flex-direction: column;
   align-items: center;
   background-size: cover;
-  
+  background-attachment: fixed;
+   
   background-repeat: no-repeat;
-  background-image: url("./Images/pills.jpg");
+  background-image: url("./Images/homepage-photo.avif");
 }
 body {
   margin: 0;
@@ -25,12 +26,36 @@ body {
   border-radius: 12px;
   border: 2px solid black;
 }
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
 .login-container {
   background-size: cover;
   height: 100%;
   background-repeat: no-repeat;
   background-image: url("./Images/login_photo.jpg");
+}
+.signup-container {
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: url("./Images/sign-up-page.avif");
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 335px
+  ;
 }
 .login-heading {
   font-size: 60px;
@@ -41,6 +66,9 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+i {
+  font-size: 27px;
+}
 .loginbtn {
   padding: 8px;
   border-radius: 8px;
@@ -122,7 +150,7 @@ body {
 }
 .med-container{
   background-color: white;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
   width: 300px;
   margin: 10px;
@@ -134,6 +162,7 @@ body {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 250px;
 
   
 }
@@ -210,8 +239,26 @@ margin: top 20px;
   text-decoration: none;
   padding: 0;
 }
+.coming-soon-container{
+  display: flex;
+  justify-content: space-around;
+  width: 800px;
+}
+.soon-box h2{
+  margin-left: 20px;
+}
+.soon-box{
+  display: flex;
+  width: 350px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+
+}
 .med-container{
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
   width: 300px;
   margin: 10px;
