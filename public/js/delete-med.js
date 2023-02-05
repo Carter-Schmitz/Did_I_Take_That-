@@ -2,7 +2,8 @@
 
 document.querySelectorAll(".delete-med-btn").forEach((btn,index)=>{ 
   btn.addEventListener('click', ()=> {
-    deleteFormHandler(index)  
+    deleteFormHandler(index)  ;
+ 
   })
 })
   

@@ -9,6 +9,10 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
+  
+  background-repeat: no-repeat;
+  background-image: url("./Images/pills.jpg");
 }
 body {
   margin: 0;
@@ -21,6 +25,7 @@ body {
   border-radius: 12px;
   border: 2px solid black;
 }
+
 .login-container {
   background-size: cover;
   height: 100%;
@@ -116,6 +121,7 @@ body {
   padding: 0;
 }
 .med-container{
+  background-color: white;
   border: 1px solid black;
   border-radius: 5px;
   width: 300px;
@@ -126,8 +132,9 @@ body {
 }
 .meds-container{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
+
   
 }
 
@@ -216,6 +223,7 @@ margin: top 20px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  flex-direction: row;
   
 }
 
@@ -232,3 +240,4 @@ margin-left: 60px;
 margin: top 20px;
 
 }
+
